@@ -1,0 +1,225 @@
+// Will use Xendit payment
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extendit API Integration</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 p-10">
+
+    <!-- Balance API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Balance API</h2>
+        <button onclick="getBalance()" class="bg-blue-500 text-white p-2 rounded">Get Balance</button>
+        <div id="balanceResult" class="mt-4"></div>
+    </div>
+
+    <!-- Customer API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Customer API</h2>
+        <form id="customerForm">
+            <input type="text" id="customerName" placeholder="Customer Name" class="border p-2 mb-4 w-full">
+            <input type="email" id="customerEmail" placeholder="Customer Email" class="border p-2 mb-4 w-full">
+            <button type="button" onclick="createCustomer()" class="bg-blue-500 text-white p-2 rounded">Create Customer</button>
+        </form>
+        <div id="customerResult" class="mt-4"></div>
+    </div>
+
+    <!-- Invoice API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Invoice API</h2>
+        <form id="invoiceForm">
+            <input type="text" id="customerIdForInvoice" placeholder="Customer ID" class="border p-2 mb-4 w-full">
+            <input type="number" id="invoiceAmount" placeholder="Amount" class="border p-2 mb-4 w-full">
+            <button type="button" onclick="createInvoice()" class="bg-blue-500 text-white p-2 rounded">Create Invoice</button>
+        </form>
+        <div id="invoiceResult" class="mt-4"></div>
+    </div>
+
+    <!-- Payment Method API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Payment Method API</h2>
+        <form id="paymentMethodForm">
+            <input type="text" id="customerIdForPaymentMethod" placeholder="Customer ID" class="border p-2 mb-4 w-full">
+            <input type="text" id="cardNumber" placeholder="Card Number" class="border p-2 mb-4 w-full">
+            <input type="text" id="expiryMonth" placeholder="Expiry Month" class="border p-2 mb-4 w-full">
+            <input type="text" id="expiryYear" placeholder="Expiry Year" class="border p-2 mb-4 w-full">
+            <input type="text" id="cvv" placeholder="CVV" class="border p-2 mb-4 w-full">
+            <button type="button" onclick="addPaymentMethod()" class="bg-blue-500 text-white p-2 rounded">Add Payment Method</button>
+        </form>
+        <div id="paymentMethodResult" class="mt-4"></div>
+    </div>
+
+    <!-- Payment Request API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Payment Request API</h2>
+        <form id="paymentRequestForm">
+            <input type="text" id="customerIdForPaymentRequest" placeholder="Customer ID" class="border p-2 mb-4 w-full">
+            <input type="number" id="paymentRequestAmount" placeholder="Amount" class="border p-2 mb-4 w-full">
+            <input type="text" id="currency" placeholder="Currency" class="border p-2 mb-4 w-full">
+            <button type="button" onclick="createPaymentRequest()" class="bg-blue-500 text-white p-2 rounded">Create Payment Request</button>
+        </form>
+        <div id="paymentRequestResult" class="mt-4"></div>
+    </div>
+
+    <!-- Payout API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Payout API</h2>
+        <form id="payoutForm">
+            <input type="number" id="payoutAmount" placeholder="Amount" class="border p-2 mb-4 w-full">
+            <input type="text" id="payoutCurrency" placeholder="Currency" class="border p-2 mb-4 w-full">
+            <input type="text" id="destination" placeholder="Destination" class="border p-2 mb-4 w-full">
+            <button type="button" onclick="createPayout()" class="bg-blue-500 text-white p-2 rounded">Create Payout</button>
+        </form>
+        <div id="payoutResult" class="mt-4"></div>
+    </div>
+
+    <!-- Refund API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Refund API</h2>
+        <form id="refundForm">
+            <input type="text" id="transactionIdForRefund" placeholder="Transaction ID" class="border p-2 mb-4 w-full">
+            <input type="number" id="refundAmount" placeholder="Amount" class="border p-2 mb-4 w-full">
+            <input type="text" id="refundReason" placeholder="Reason" class="border p-2 mb-4 w-full">
+            <button type="button" onclick="createRefund()" class="bg-blue-500 text-white p-2 rounded">Create Refund</button>
+        </form>
+        <div id="refundResult" class="mt-4"></div>
+    </div>
+
+    <!-- Transaction API -->
+    <div class="bg-white p-6 rounded shadow-md mb-6">
+        <h2 class="text-xl mb-4">Transaction API</h2>
+        <form id="transactionForm">
+            <input type="text" id="transactionId" placeholder="Transaction ID" class="border p-2 mb-4 w-full">
+            <button type="button" onclick="getTransaction()" class="bg-blue-500 text-white p-2 rounded">Get Transaction</button>
+        </form>
+        <div id="transactionResult" class="mt-4"></div>
+    </div>
+
+    <script>
+        const apiUrl = 'YOUR_BACKEND_ENDPOINT';
+
+        function getBalance() {
+            fetch(`${apiUrl}/balance`)
+                .then(response => response.json())
+                .then(data => document.getElementById('balanceResult').innerText = JSON.stringify(data))
+                .catch(error => console.error('Error:', error));
+        }
+
+        function createCustomer() {
+            const name = document.getElementById('customerName').value;
+            const email = document.getElementById('customerEmail').value;
+
+            fetch(`${apiUrl}/customers`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('customerResult').innerText = JSON.stringify(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function createInvoice() {
+            const customerId = document.getElementById('customerIdForInvoice').value;
+            const amount = document.getElementById('invoiceAmount').value;
+
+            fetch(`${apiUrl}/invoices`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ customer_id: customerId, amount })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('invoiceResult').innerText = JSON.stringify(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function addPaymentMethod() {
+            const customerId = document.getElementById('customerIdForPaymentMethod').value;
+            const cardNumber = document.getElementById('cardNumber').value;
+            const expiryMonth = document.getElementById('expiryMonth').value;
+            const expiryYear = document.getElementById('expiryYear').value;
+            const cvv = document.getElementById('cvv').value;
+
+            fetch(`${apiUrl}/customers/${customerId}/payment-methods`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ type: 'credit_card', details: { number: cardNumber, expiry_month: expiryMonth, expiry_year: expiryYear, cvv } })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('paymentMethodResult').innerText = JSON.stringify(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function createPaymentRequest() {
+            const customerId = document.getElementById('customerIdForPaymentRequest').value;
+            const amount = document.getElementById('paymentRequestAmount').value;
+            const currency = document.getElementById('currency').value;
+
+            fetch(`${apiUrl}/payment-requests`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ customer_id: customerId, amount, currency })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('paymentRequestResult').innerText = JSON.stringify(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function createPayout() {
+            const amount = document.getElementById('payoutAmount').value;
+            const currency = document.getElementById('payoutCurrency').value;
+            const destination = document.getElementById('destination').value;
+
+            fetch(`${apiUrl}/payouts`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ amount, currency, destination })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('payoutResult').innerText = JSON.stringify(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function createRefund() {
+            const transactionId = document.getElementById('transactionIdForRefund').value;
+            const amount = document.getElementById('refundAmount').value;
+            const reason = document.getElementById('refundReason').value;
+
+            fetch(`${apiUrl}/transactions/${transactionId}/refunds`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ amount, reason })
+            })
+            .then(response => response.json())
+            .then(data => document.getElementById('refundResult').innerText = JSON.stringify(data))
+            .catch(error => console.error('Error:', error));
+        }
+
+        function getTransaction() {
+            const transactionId = document.getElementById('transactionId').value;
+
+            fetch(`${apiUrl}/transactions/${transactionId}`)
+                .then(response => response.json())
+                .then(data => document.getElementById('transactionResult').innerText = JSON.stringify(data))
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

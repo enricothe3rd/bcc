@@ -1,0 +1,167 @@
+[20-Aug-2024 05:21:14 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 5
+[20-Aug-2024 05:21:14 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 5
+[20-Aug-2024 05:21:16 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 5
+[20-Aug-2024 05:21:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 5
+[20-Aug-2024 05:21:27 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 5
+[20-Aug-2024 05:21:27 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 5
+[20-Aug-2024 05:23:15 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:23:15 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:24:39 UTC] PHP Warning:  require(../PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:24:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:24:42 UTC] PHP Warning:  require(../PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:24:42 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:24:59 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:24:59 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:25:00 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:25:00 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:26:11 UTC] PHP Warning:  require(/home/bccemseg/public_html/PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:26:11 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/bccemseg/public_html/PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 9
+[20-Aug-2024 05:33:58 UTC] PHP Warning:  Undefined array key "role" in /home/bccemseg/public_html/register.php on line 23
+[20-Aug-2024 13:24:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/registrar_dashboard.php:479
+Stack trace:
+#0 /home/bccemseg/public_html/registrar_dashboard.php(479): PDO->query()
+#1 {main}
+  thrown in /home/bccemseg/public_html/registrar_dashboard.php on line 479
+[20-Aug-2024 13:25:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/registrar_dashboard.php:479
+Stack trace:
+#0 /home/bccemseg/public_html/registrar_dashboard.php(479): PDO->query()
+#1 {main}
+  thrown in /home/bccemseg/public_html/registrar_dashboard.php on line 479
+[20-Aug-2024 13:25:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/registrar_dashboard.php:479
+Stack trace:
+#0 /home/bccemseg/public_html/registrar_dashboard.php(479): PDO->query()
+#1 {main}
+  thrown in /home/bccemseg/public_html/registrar_dashboard.php on line 479
+[20-Aug-2024 13:25:56 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/registrar_dashboard.php:479
+Stack trace:
+#0 /home/bccemseg/public_html/registrar_dashboard.php(479): PDO->query()
+#1 {main}
+  thrown in /home/bccemseg/public_html/registrar_dashboard.php on line 479
+[20-Aug-2024 13:27:47 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/create_class.php:8
+Stack trace:
+#0 /home/bccemseg/public_html/create_class.php(8): PDO->prepare()
+#1 {main}
+  thrown in /home/bccemseg/public_html/create_class.php on line 8
+[20-Aug-2024 13:27:54 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/create_class.php:8
+Stack trace:
+#0 /home/bccemseg/public_html/create_class.php(8): PDO->prepare()
+#1 {main}
+  thrown in /home/bccemseg/public_html/create_class.php on line 8
+[20-Aug-2024 13:30:02 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/registrar_dashboard.php:479
+Stack trace:
+#0 /home/bccemseg/public_html/registrar_dashboard.php(479): PDO->query()
+#1 {main}
+  thrown in /home/bccemseg/public_html/registrar_dashboard.php on line 479
+[20-Aug-2024 13:30:08 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/create_class.php:8
+Stack trace:
+#0 /home/bccemseg/public_html/create_class.php(8): PDO->prepare()
+#1 {main}
+  thrown in /home/bccemseg/public_html/create_class.php on line 8
+[20-Aug-2024 13:30:19 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/create_class.php:8
+Stack trace:
+#0 /home/bccemseg/public_html/create_class.php(8): PDO->prepare()
+#1 {main}
+  thrown in /home/bccemseg/public_html/create_class.php on line 8
+[20-Aug-2024 13:30:21 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'bccemseg_token_db1.classes' doesn't exist in /home/bccemseg/public_html/registrar_dashboard.php:479
+Stack trace:
+#0 /home/bccemseg/public_html/registrar_dashboard.php(479): PDO->query()
+#1 {main}
+  thrown in /home/bccemseg/public_html/registrar_dashboard.php on line 479
+[20-Aug-2024 23:22:08 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:22:08 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:22:36 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:22:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:22:38 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:22:38 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:22:39 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:22:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:24:16 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:24:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:24:18 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:24:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:24:20 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:24:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:54:50 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[20-Aug-2024 23:54:50 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[21-Aug-2024 00:01:17 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 123
+[21-Aug-2024 00:01:27 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 123
+[21-Aug-2024 00:04:23 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 193
+[21-Aug-2024 00:04:30 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 193
+[21-Aug-2024 00:04:34 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 193
+[21-Aug-2024 00:06:30 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 193
+[21-Aug-2024 00:07:56 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 193
+[21-Aug-2024 00:16:43 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:17:10 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:17:13 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:17:55 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:18:58 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:19:12 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:19:14 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:19:22 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:19:27 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:19:29 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:19:31 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:19:37 UTC] PHP Warning:  Undefined variable $msg in /home/bccemseg/public_html/forgot_password.php on line 156
+[21-Aug-2024 00:21:03 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 193
+[21-Aug-2024 00:21:19 UTC] PHP Warning:  Undefined variable $msg_class in /home/bccemseg/public_html/forgot_password.php on line 193
+[21-Aug-2024 00:36:43 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/forgot_password.php on line 3
+[21-Aug-2024 00:36:43 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/forgot_password.php:3
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/forgot_password.php on line 3
+[21-Aug-2024 01:36:37 UTC] PHP Warning:  require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory in /home/bccemseg/public_html/register.php on line 8
+[21-Aug-2024 01:36:37 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'PHPMailer/src/PHPMailer.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bccemseg/public_html/register.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/bccemseg/public_html/register.php on line 8

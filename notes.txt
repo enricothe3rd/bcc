@@ -1,0 +1,138 @@
+==MYSQL==
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    role VARCHAR(50),
+    status VARCHAR(50) DEFAULT 'inactive',
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    email_confirmed TINYINT(1) NOT NULL DEFAULT 0
+);
+
+
+CREATE TABLE password_resets (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    created_at DATETIME NOT NULL,
+    expires_at DATETIME NOT NULL
+);
+
+
+CREATE TABLE user_registration (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    token VARCHAR(255) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE classes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE subjects (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    class_id INT NOT NULL,
+    code VARCHAR(20) NOT NULL,
+    subject_title VARCHAR(100) NOT NULL,
+    units DECIMAL(5,2) NOT NULL,
+    room VARCHAR(50),
+    day_time VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (class_id) REFERENCES classes(id)
+);
+
+code,subject_title,units,room,day_time
+
+
+
+
+==CRUD SUBJECT / RELATED TO SUBJECTS==
+
+choose_class_subjects.php
+create_class.php
+create_subject.php
+delete_subject.php
+edit_class.php
+edit_subjects.php
+get_subjects.php
+subject.php
+update_class.php
+update_subject.php
+
+
+
+==USER RELATED==
+admin_dashboard
+confirm_email1
+db_connection
+enrollment_confirmation
+
+
+==Problem Today 04/07/2024===
+Combining the enrollment_form.php and choose_class_subjects.php
+
+
+
+
+
+
+
+
+<?php
+// Include the main TCPDF library (search for installation path).
+require_once('tcpdf_include.php');
+
+// Include the database connection file
+require_once('db_connection1.php');
+
+// Fetch data from the enrollment table
+$sql = "SELECT id, student_id, firstname, middlename, lastname, suffix, status, created_at, updated_at, year, course_id, sex, dob, address, email, contact_no, statusofenrollment FROM enrollment";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$results = $stmt->fetchAll();
+
+// Create new PDF document
+$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+
+// Set document information
+$pdf->SetCreator(PDF_CREATOR);
+$pdf->SetAuthor('Your Name');
+$pdf->SetTitle('Enrollment PDF');
+$pdf->SetSubject('PDF with Enrollment Data');
+$pdf->SetKeywords('TCPDF, PDF, enrollment, guide');
+
+// Set default monospaced font
+$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+
+// Set margins
+$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+// Set auto page breaks
+$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+
+// Set image scale factor
+$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+
+// Add a page
+$pdf->AddPage();
+
+// Set font
+$pdf->SetFont('helvetica', '', 12);
+
+// Add a title
+$pdf->Cell(0, 10, 'Enrollment Data', 0, 1, 'C');
+
+// Table header
+$pdf->SetFont('helvetica', 'B', 8);
+$header = array('ID', 'Student ID', ' -->
